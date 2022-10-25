@@ -17,7 +17,7 @@ async def getInformation(info : Request):
     b=base64.b64decode(req_info['image'])
 # print(b)
     img=Image.open(io.BytesIO(b))
-    img.save("geeks1.png")
+    # simg.save("geeks1.png")
     Qry=img
     Qry=Qry.convert("L")
     Qry=np.array(Qry.resize((224,224)))
