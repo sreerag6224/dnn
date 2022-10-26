@@ -35,7 +35,7 @@ async def getInformation(info : Request):
     p=dnnModel1.predict(xt)
     CLASSES=['COVID','NORMAL','PNEUMONIA']
     pred=CLASSES[np.argmax(p)]
-    predval=np.max(p)
+    predval=np.argmax(p)
     # img
     return {
         "status" : "SUCCESS",
