@@ -10,7 +10,7 @@ from skimage.transform import rescale,resize
 import keras
 
 app = FastAPI()
-@app.post("/getInformation")
+@app.post("/get_prediction")
 async def getInformation(info : Request):
     req_info = await info.json()
     # print(req_info)
